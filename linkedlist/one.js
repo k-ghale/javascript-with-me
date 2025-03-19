@@ -12,18 +12,17 @@ for (let i = 0; i < myArray.length; i++) {
 console.log(myArray[minVal])
 
 //Bubble Sort
-function bubSort(arr) {
-    let arrLength = arr.length;
-    for (let i = 0; i < arrLength ; i++) {
-        for (let j = 0; j < arrLength - i - 1; j++) {
-            if(arr[j] > arr[j+1]){
-                let temp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp
-            }
-        } 
+function bubSort(array){
+    for (let i = 0; i < array.length; i++) {
+       for (let j = 0; j < array.length - i - 1; j++) {
+            if (array[j] > array[j+1])  {
+               const temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp 
+            }        
+       } 
     }
-    return arr
+    return array
 }
 
 //Selection Sort
@@ -43,10 +42,6 @@ function selSort(arr){
     }
     return arr
 }
-
-
-
-
 
 let my_array = [64, 34, 25, 12, 22, 11, 90, 5]
 
