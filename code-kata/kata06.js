@@ -3,11 +3,12 @@
 
 var removeElement = function(nums, val){
     let k = 0
-    for (let i = 0; i < nums.length; i++) {
-       if (nums[i] !== val) {
-            nums[k] = nums[i]
-            k++
+
+    for (let i = nums.length; i >= 0; i--) {
+       if (val === nums[i]) {
+            nums[i] = val
+           k++
        } 
     }
-    return k
+
 }
